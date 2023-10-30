@@ -10,5 +10,4 @@ public class FantasyLeagueApplication {
 		SpringApplication.run(FantasyLeagueApplication.class, args);
 
 	}
-
 }
