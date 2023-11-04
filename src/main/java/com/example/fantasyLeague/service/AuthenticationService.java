@@ -8,6 +8,7 @@ import com.example.fantasyLeague.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -35,7 +36,8 @@ public class AuthenticationService {
     public JwtAuthenticationResponse signIn(SignInRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(),request.getPassword()));
-        var jwt = jwtService.generateToken(userRepository.findByUsername(request.getUsername()));
+        var jwt = jwtService.generateToken(userRepository.findByUsername(request.getUsername())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found")));
         return new JwtAuthenticationResponse(jwt);
     }
 }
