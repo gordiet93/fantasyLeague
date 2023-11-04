@@ -4,6 +4,7 @@ import com.example.fantasyLeague.model.dto.JwtAuthenticationResponse;
 import com.example.fantasyLeague.model.dto.SignInRequest;
 import com.example.fantasyLeague.model.dto.UserDto;
 import com.example.fantasyLeague.service.AuthenticationService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +27,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signin")
-    public JwtAuthenticationResponse signIn(@RequestBody SignInRequest request) {
+    public JwtAuthenticationResponse signIn(@Valid @RequestBody SignInRequest request) {
         return authenticationService.signIn(request);
     }
 }

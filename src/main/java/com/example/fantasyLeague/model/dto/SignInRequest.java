@@ -1,7 +1,16 @@
 package com.example.fantasyLeague.model.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class SignInRequest {
+
+    @NotEmpty
+    @Size(min = 2, message = "username must be 2 characters or more")
     private String username;
+
+    @NotEmpty
     private String password;
 
     public SignInRequest() {
