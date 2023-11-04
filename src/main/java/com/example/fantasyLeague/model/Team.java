@@ -18,12 +18,7 @@ public class Team extends AuditModel {
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Player> players;
 
-    public Team() {
-    }
-
-    public Team(Long id) {
-        this.id = id;
-    }
+    public Team() {}
 
     public Long getId() {
         return id;
