@@ -22,7 +22,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signup")
-    public JwtAuthenticationResponse signUp(@RequestBody UserDto userDto) {
+    public JwtAuthenticationResponse signUp(@Valid @RequestBody UserDto userDto) {
         return authenticationService.signUp(userDto);
     }
 

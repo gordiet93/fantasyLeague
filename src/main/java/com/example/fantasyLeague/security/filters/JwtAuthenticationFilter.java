@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.filters;
+package com.example.fantasyLeague.security.filters;
 
 import com.example.fantasyLeague.service.JwtService;
 import com.example.fantasyLeague.service.UserService;

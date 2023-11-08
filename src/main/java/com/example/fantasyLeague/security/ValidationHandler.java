@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.controller;
+package com.example.fantasyLeague.security;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

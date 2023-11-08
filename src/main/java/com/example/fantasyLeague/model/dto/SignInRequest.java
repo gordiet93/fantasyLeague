@@ -1,6 +1,6 @@
 package com.example.fantasyLeague.model.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import com.example.fantasyLeague.security.constraints.ValidPassword;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
@@ -11,6 +11,7 @@ public class SignInRequest {
     private String username;
 
     @NotEmpty
+    @ValidPassword
     private String password;
 
     public SignInRequest() {

@@ -1,6 +1,6 @@
-package com.example.fantasyLeague.config;
+package com.example.fantasyLeague.security;
 
-import com.example.fantasyLeague.filters.JwtAuthenticationFilter;
+import com.example.fantasyLeague.security.filters.JwtAuthenticationFilter;
 import com.example.fantasyLeague.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

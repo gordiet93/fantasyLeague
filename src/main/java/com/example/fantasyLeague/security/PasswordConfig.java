@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.config;
+package com.example.fantasyLeague.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
