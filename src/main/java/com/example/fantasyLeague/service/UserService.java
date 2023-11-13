@@ -1,6 +1,6 @@
 package com.example.fantasyLeague.service;
 
-import com.example.fantasyLeague.model.dto.UserDto;
+import com.example.fantasyLeague.dto.UserDto;
 import com.example.fantasyLeague.model.User;
 import com.example.fantasyLeague.model.enums.Role;
 import com.example.fantasyLeague.repository.UserRepository;

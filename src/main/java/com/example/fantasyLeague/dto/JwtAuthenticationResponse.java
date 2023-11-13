@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.model.dto;
+package com.example.fantasyLeague.dto;
 
 public class JwtAuthenticationResponse {
     private String token;

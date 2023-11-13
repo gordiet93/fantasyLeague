@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.model.dto;
+package com.example.fantasyLeague.dto;
 
 import com.example.fantasyLeague.security.constraints.ValidPassword;
 import jakarta.validation.constraints.NotEmpty;

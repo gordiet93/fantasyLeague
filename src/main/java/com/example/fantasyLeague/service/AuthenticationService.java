@@ -1,9 +1,9 @@
 package com.example.fantasyLeague.service;
 
 import com.example.fantasyLeague.model.User;
-import com.example.fantasyLeague.model.dto.JwtAuthenticationResponse;
-import com.example.fantasyLeague.model.dto.SignInRequest;
-import com.example.fantasyLeague.model.dto.UserDto;
+import com.example.fantasyLeague.dto.JwtAuthenticationResponse;
+import com.example.fantasyLeague.dto.SignInRequest;
+import com.example.fantasyLeague.dto.UserDto;
 import com.example.fantasyLeague.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

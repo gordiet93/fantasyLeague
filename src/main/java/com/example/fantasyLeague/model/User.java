@@ -1,6 +1,6 @@
 package com.example.fantasyLeague.model;
 
-import com.example.fantasyLeague.model.dto.UserDto;
+import com.example.fantasyLeague.dto.UserDto;
 import com.example.fantasyLeague.model.enums.Role;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

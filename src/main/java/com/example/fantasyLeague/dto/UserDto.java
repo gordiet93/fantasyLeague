@@ -1,4 +1,4 @@
-package com.example.fantasyLeague.model.dto;
+package com.example.fantasyLeague.dto;
 
 import com.example.fantasyLeague.security.constraints.ValidPassword;
 import jakarta.validation.constraints.NotEmpty;
@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 public class UserDto {
 
     @NotEmpty
-    @Size(min = 2, message = "must be 2 characters or more")
+    @Size(min = 2, message = "must be 8 or more characters in length")
     private String username;
 
     @NotEmpty
