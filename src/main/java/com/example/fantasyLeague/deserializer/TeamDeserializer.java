@@ -21,18 +21,21 @@ public class TeamDeserializer extends JsonDeserializer<Team> {
         JsonNode node = mapper.readTree(jsonParser);
 
         Team team = new Team();
+
         team.setId(node.get("id").asLong());
         team.setName(node.get("name").toString());
 
-        JsonNode squad = node.get("squad").get("data");
+        JsonNode playersNode = node.get("players");
         List<Player> players = new ArrayList<>();
-        for (JsonNode playerNode : squad) {
-            Player player = mapper.readValue(playerNode.get("player").get("data").traverse(), Player.class);
+        for (JsonNode playerNode : playersNode) {
+
+            Player player = mapper.readValue(playerNode.get("player").traverse(), Player.class);
             player.setTeam(team);
             players.add(player);
         }
 
         team.setPlayers(players);
+
         return team;
     }
 }

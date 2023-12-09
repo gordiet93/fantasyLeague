@@ -10,22 +10,23 @@ import jakarta.persistence.*;
 public class Player extends AuditModel {
 
     @Id
-    @JsonProperty("player_id")
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private Position position;
+//    @JsonProperty("position_id")
+//    @Enumerated(EnumType.STRING)
+//    private Position position;
 
     @JsonProperty("display_name")
     private String name;
-
-    @JsonProperty("nationality")
-    private String nationality;
 
     @ManyToOne
     private Team team;
 
     public Player(){}
+
+    public Player(Long id) {
+        this.id = id;
+    }
 
     public Long getId() {
         return id;
@@ -35,13 +36,13 @@ public class Player extends AuditModel {
         this.id = id;
     }
 
-    public Position getPosition() {
-        return position;
-    }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
+//    public Position getPosition() {
+//        return position;
+//    }
+//
+//    public void setPosition(Position position) {
+//        this.position = position;
+//    }
 
     public String getName() {
         return name;
@@ -51,25 +52,12 @@ public class Player extends AuditModel {
         this.name = name;
     }
 
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
     public Team getTeam() {
         return team;
     }
 
     public void setTeam(Team team) {
         this.team = team;
-    }
-
-    @JsonProperty("position")
-    private void setDetails(JsonNode node) {
-        position = Position.valueOf(node.get("data").get("name").asText().toUpperCase());
     }
 
     @Override

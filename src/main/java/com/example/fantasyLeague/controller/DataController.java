@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/data")
+@RequestMapping("/api/v1/data")
 public class DataController {
 
     private final DataService dataService;
@@ -18,7 +18,7 @@ public class DataController {
     }
 
     @PostMapping
-    public void getTeamsAndPlayers() {
+    public void getData() {
         dataService.getAndSaveBulkData();
     }
 }

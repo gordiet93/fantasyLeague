@@ -55,7 +55,7 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(authorise -> authorise
                         .requestMatchers(HttpMethod.POST, "/api/v1/signup", "/api/v1/signin").permitAll()
-                        .requestMatchers("/api/v1/test/**").permitAll()
+                        .requestMatchers("/api/v1/test/**", "/api/v1/data/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .authenticationProvider(authenticationProvider())

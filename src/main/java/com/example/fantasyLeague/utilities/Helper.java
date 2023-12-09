@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class Helper {
 
-    private static final String URLBASE = "https://soccer.sportmonks.com/api/v2.0/";
+    private static final String URLBASE = "https://api.sportmonks.com/v3/football/";
     private static final String APITOKEN = "api_token=jbGDcAS7dcekbiqJn9HKU6pTftzFXl0dxVxQkVktGvjw1cJudCnS7p9U5pP2";
 
     public static String callURL(String url1) throws IOException {

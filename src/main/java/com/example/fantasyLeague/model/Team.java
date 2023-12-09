@@ -1,12 +1,14 @@
 package com.example.fantasyLeague.model;
 
 import com.example.fantasyLeague.deserializer.TeamDeserializer;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 
 import java.util.List;
 import java.util.Objects;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonDeserialize(using = TeamDeserializer.class)
 @Entity
 public class Team extends AuditModel {
@@ -19,6 +21,10 @@ public class Team extends AuditModel {
     private List<Player> players;
 
     public Team() {}
+
+    public Team(Long id) {
+        this.id = id;
+    }
 
     public Long getId() {
         return id;
